@@ -1,0 +1,11 @@
+/* Add any custom styles here */
+.hero,
+.about-hero,
+.services-hero {
+  background-image: url("/placeholder.svg?height=400&width=1200");
+  background-size: cover;
+  background-position: center;
+}
+
+
+
