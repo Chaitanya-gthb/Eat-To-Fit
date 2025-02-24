@@ -3,28 +3,72 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Eat2Fit website loaded successfully!");
 });
 
-//mealplanner
+
 function nextStep(step) {
   document.getElementById(`step${step}`).classList.add("hidden");
   document.getElementById(`step${step + 1}`).classList.remove("hidden");
 }
 
 function generateMealPlan() {
-  const goal = document.getElementById("goal").value;
-  let mealPlan = "";
+  const goal = document.querySelector('input[name="goal"]:checked')?.value; // Get selected radio button value
+  let mealPlanHTML = "";
 
   if (goal === "weight_loss") {
-    mealPlan =
-      "Breakfast: Oatmeal with fruits\nLunch: Grilled chicken salad\nDinner: Steamed veggies and quinoa";
+    mealPlanHTML = `
+    <div class="bg-gray-600 p-4 rounded-xl">
+      <h4 class="text-lg text-lime-400 font-semibold mb-4">Your Weight Loss Meal Plan</h4>
+      <div>
+      <p class="mb-2">BREAKFAST :- </p>
+      <div class="meal-item flex justify-left items-center gap-10">
+        <img src="https://images.unsplash.com/photo-1604480132715-bd70038b74df?q=80&w=2118&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-32 h-20 mb-2"/>
+        <p class="text-white">Oatmeal with fruits</p>
+      </div>
+      </div>
+      <div>
+      <p class="mb-2">LUNCH :- </p>
+      <div class="meal-item flex justify-left items-center gap-10">
+        <img src="https://images.unsplash.com/photo-1604480132715-bd70038b74df?q=80&w=2118&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-32 h-20 mb-2"/>
+        <p class="text-white">Oatmeal with fruits</p>
+      </div>
+      </div>
+      <div>
+      <p class="mb-2">DINNER :- </p>
+      <div class="meal-item flex justify-left items-center gap-10">
+        <img src="https://images.unsplash.com/photo-1604480132715-bd70038b74df?q=80&w=2118&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-32 h-20 mb-2"/>
+        <p class="text-white">Oatmeal with fruits</p>
+      </div>
+      </div>
+      </div>
+    `;
   } else if (goal === "weight_gain") {
-    mealPlan =
-      "Breakfast: Scrambled eggs with whole grain toast\nLunch: Brown rice with chicken\nDinner: Salmon with sweet potatoes";
+    mealPlanHTML = `
+      <h4 class="text-xl font-semibold mb-4">Your Weight Gain Meal Plan</h4>
+      <div class="meal-item">
+        <p><strong>Breakfast:</strong> Scrambled eggs with whole grain toast</p>
+      </div>
+      <div class="meal-item">
+        <p><strong>Lunch:</strong> Brown rice with chicken</p>
+      </div>
+      <div class="meal-item">
+        <p><strong>Dinner:</strong> Salmon with sweet potatoes</p>
+      </div>
+    `;
   } else {
-    mealPlan =
-      "Breakfast: Greek yogurt with nuts\nLunch: Turkey sandwich with whole wheat bread\nDinner: Stir-fried tofu with veggies";
+    mealPlanHTML = `
+      <h4 class="text-xl font-semibold mb-4">Your Balanced Meal Plan</h4>
+      <div class="meal-item">
+        <p><strong>Breakfast:</strong> Greek yogurt with nuts</p>
+      </div>
+      <div class="meal-item">
+        <p><strong>Lunch:</strong> Turkey sandwich with whole wheat bread</p>
+      </div>
+      <div class="meal-item">
+        <p><strong>Dinner:</strong> Stir-fried tofu with veggies</p>
+      </div>
+    `;
   }
 
-  document.getElementById("meal-plan-result").innerText = mealPlan;
+  document.getElementById("meal-plan-result").innerHTML = mealPlanHTML;
   document.getElementById("generate-plan").style.display = "none";
 }
 
