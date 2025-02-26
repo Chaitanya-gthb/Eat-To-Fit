@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="../css/styles.css" rel="stylesheet" />
   </head>
-  <body class="bg-gray-100 font-sans">
+  <body class="bg-white font-sans">
     <header class="bg-white text-black">
       <nav
         class="container mx-auto px-6 py-3 flex justify-between items-center"
@@ -256,45 +256,51 @@
             </div>
           </form>
         </section> -->
-        <section class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto mt-10 mb-10">
+        <div class="pt-24 pb-20">
+          <h3 class="text-3xl font-bold text-center mb-4">
+            Create your personalized meal-plan
+          </h3>
+          <p class="px-20 text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora quasi, nobis eveniet nostrum eos tenetur 
+            quibusdam odit totam repellendus, dolores temporibus ut, quis assumenda.
+          </p>
+        <section class="bg-transparent p-8 rounded-lg shadow-xl border max-w-2xl mx-auto mt-10 mb-10">
           <form id="meal-plan-form">
-              <h3 class="text-3xl font-bold text-center mb-8">
-                  Create Your Personalized Meal Plan
-              </h3>
+              
           
               <!-- Step 1: Personal Details -->
               <div class="step" id="step1">
-                  <h4 class="text-xl font-semibold mb-4">Step 1: Personal Details</h4>
-                  <input type="text" placeholder="Name" class="w-full px-3 py-2 border rounded-md mb-4" required />
-                  <input type="number" placeholder="Age" class="w-full px-3 py-2 border rounded-md mb-4" required />
-                  <input type="number" placeholder="Height (cm)" class="w-full px-3 py-2 border rounded-md mb-4" required />
-                  <input type="number" placeholder="Weight (kg)" class="w-full px-3 py-2 border rounded-md mb-4" required />
-                  <button type="button" class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm px-6 py-2.5 text-center me-2 mb-2" onclick="nextStep(1)">
-                      Next
+                  <h4 class="text-md italic font-semibold mb-4">Step 1: Personal Details</h4>
+                  <input type="text" placeholder="Name" class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4" required />
+                  <input type="number" placeholder="Age" class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4" required />
+                  <input type="number" placeholder="Height (cm)" class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4" required />
+                  <input type="number" placeholder="Weight (kg)" class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4" required />
+                  <button type="button" class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm px-12 py-2.5 text-center me-2 mb-2 " onclick="nextStep(1)">
+                      N e X t
                   </button>
               </div>
           
               <!-- Step 2: Goal Selection -->
               <div class="step hidden" id="step2">
-                  <h4 class="text-xl font-semibold mb-4">Step 2: Your Goal</h4>
+                  <h4 class="text-md italic font-semibold mb-4">Step 2: Your Goal</h4>
                   <div class="flex flex-col gap-3">
                       <label class="goal-option">
                           <input type="radio" name="goal" id="goal" value="weight_loss" class="hidden peer" />
-                          <div class="goal-box flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
+                          <div class="bg-gray-50 goal-box flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
                               <img src="https://images.unsplash.com/photo-1604480132715-bd70038b74df?q=80&w=2118&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Weight Loss" class="w-32 h-24 rounded-xl mr-3 object-cover text-center" />
                               <span class="text-lg font-medium peer-checked:text-teal-600">Weight Loss</span>
                           </div>
                       </label>
                       <label class="goal-option">
                           <input type="radio" name="goal"  id="goal"value="weight_gain" class="hidden peer" />
-                          <div class="goal-box flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
+                          <div class="bg-gray-50 goal-box flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
                               <img src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Weight Gain" class="w-32 h-24 rounded-xl mr-3 object-cover text-center" />
                               <span class="text-lg font-medium peer-checked:text-teal-600">Weight Gain</span>
                           </div>
                       </label>
                       <label class="goal-option">
                         <input type="radio" name="goal"  id="goal"value="weight_maintain" class="hidden peer" />
-                        <div class="goal-box flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
+                        <div class="bg-gray-50 goal-box flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
                             <img src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Weight Maintain" class="w-32 h-24 rounded-xl mr-3" />
                             <span class="text-lg font-medium peer-checked:text-teal-600">Weight Maintain</span>
                         </div>
@@ -307,18 +313,18 @@
           
               <!-- Step 3: Allergies -->
               <div class="step hidden" id="step3">
-                  <h4 class="text-xl font-semibold mb-4">Step 3: Any Allergies</h4>
+                  <h4 class="text-md italic font-semibold mb-4">Step 3: Any Allergies</h4>
                   <div class="flex flex-col gap-3">
                       <label class="allergy-option">
                           <input type="checkbox" name="allergy" value="dairy" class="hidden peer" />
-                          <div class="allergy-box flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
+                          <div class="allergy-box bg-gray-50 flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
                               <img src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dairy" class="w-32 h-24 rounded-xl mr-3" />
                               <span class="text-lg font-medium peer-checked:text-teal-600">Dairy</span>
                           </div>
                       </label>
                       <label class="allergy-option">
                           <input type="checkbox" name="allergy" value="nuts" class="hidden peer" />
-                          <div class="allergy-box flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
+                          <div class="allergy-box bg-gray-50 flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
                               <img src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nuts" class="w-32 h-24 rounded-xl mr-3" />
                               <span class="text-lg font-medium peer-checked:text-teal-600">Nuts</span>
                           </div>
@@ -331,18 +337,18 @@
           
               <!-- Step 4: Diet Plan -->
               <div class="step hidden" id="step4">
-                  <h4 class="text-xl font-semibold mb-4">Step 4: Choose Your Diet Plan</h4>
+                  <h4 class="text-md italic font-semibold mb-4">Step 4: Choose Your Diet Plan</h4>
                   <div class="flex flex-col gap-3">
                       <label class="meal-option">
                           <input type="radio" name="meal-plan" value="keto" class="hidden peer" />
-                          <div class="meal-box flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
+                          <div class="meal-box flex items-center p-4 border-2 bg-gray-50 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
                               <img src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Keto Diet" class="w-32 h-24 rounded-xl mr-3" />
                               <span class="text-lg font-medium peer-checked:text-teal-600">Keto Diet</span>
                           </div>
                       </label>
                       <label class="meal-option">
                           <input type="radio" name="meal-plan" value="vegan" class="hidden peer" />
-                          <div class="meal-box flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
+                          <div class="meal-box flex items-center p-4 border-2 bg-gray-50 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50">
                               <img src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vegan Diet" class="w-32 h-24 rounded-xl mr-3" />
                               <span class="text-lg font-medium peer-checked:text-teal-600">Vegan Diet</span>
                           </div>
@@ -354,7 +360,7 @@
               </div>
           
               <div class="step hidden" id="step5">
-                  <h4 class="text-xl font-semibold mb-4">Step 5: Generate Meal-Plan</h4>
+                  <h4 class="text-md italic font-semibold mb-4">Step 5: Generate Meal-Plan</h4>
                   <button id="generate-plan" type="button" class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm px-6 py-2.5 text-center me-2 mb-2" onclick="generateMealPlan()">
                       Generate Meal-Plan
                   </button>
@@ -362,6 +368,7 @@
               </div>
           </form>
       </section>
+    </div>
         
 
       <section class="services-list py-20 px-6 bg-lime-200 w-full h-full">
