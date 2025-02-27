@@ -57,20 +57,15 @@
           class="bg-transparent p-8 rounded-lg shadow-xl border max-w-2xl mx-auto mt-10 mb-10"
         >
           <form id="meal-plan-form">
+            <!-- Step 1: Calorie Calculator -->
             <div
               class="step max-w-lg mx-auto mt-4 bg-white rounded-lg"
               id="step1"
             >
-            <h4 class="text-md italic font-semibold mb-4">
-              Step 1: Calorie Calculator
-            </h4>
+              <h4 class="text-md italic font-semibold mb-4">
+                Step 1: Calorie Calculator
+              </h4>
 
-            <input
-                type="text"
-                id="name"
-                class="bg-gray-50 w-full p-2 border rounded mb-4"
-                placeholder="Enter your name"
-              />
               <!-- <label class="block italic mb-2">Age:</label> -->
               <input
                 type="number"
@@ -150,7 +145,9 @@
                 Calculate Calories
               </button>
 
-              <h3 class="text-md italic font-semibold mt-4">Daily Calorie Needs:</h3>
+              <h3 class="text-md italic font-semibold mt-4">
+                Daily Calorie Needs:
+              </h3>
               <p id="result" class="mt-2 text-lg font-bold"></p>
             </div>
 
@@ -161,25 +158,24 @@
               </h4>
               <input
                 type="text"
-                placeholder="Name"
+                placeholder="Full Name"
+                class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email"
                 class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4"
                 required
               />
               <input
                 type="number"
-                placeholder="Age"
+                placeholder="Mobile-Number"
                 class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4"
                 required
               />
               <input
-                type="number"
-                placeholder="Height (cm)"
-                class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4"
-                required
-              />
-              <input
-                type="number"
-                placeholder="Weight (kg)"
+                type="date"
                 class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4"
                 required
               />
@@ -192,10 +188,10 @@
               </button>
             </div>
 
-            <!-- Step 2: Goal Selection -->
+            <!-- Step 3: Goal Selection -->
             <div class="step hidden" id="step3">
               <h4 class="text-md italic font-semibold mb-4">
-                Step 2: Your Goal
+                Step 3: Your Goal
               </h4>
               <div class="flex flex-col gap-3">
                 <label class="goal-option">
@@ -271,10 +267,10 @@
               </button>
             </div>
 
-            <!-- Step 3: Allergies -->
+            <!-- Step 4: Allergies -->
             <div class="step hidden" id="step4">
               <h4 class="text-md italic font-semibold mb-4">
-                Step 3: Any Allergies
+                Step 4: Any Allergies
               </h4>
               <div class="flex flex-col gap-3">
                 <label class="allergy-option">
@@ -327,10 +323,10 @@
               </button>
             </div>
 
-            <!-- Step 4: Diet Plan -->
+            <!-- Step 5: Diet Plan -->
             <div class="step hidden" id="step5">
               <h4 class="text-md italic font-semibold mb-4">
-                Step 4: Choose Your Diet Plan
+                Step 5: Choose Your Diet Plan
               </h4>
               <div class="flex flex-col gap-3">
                 <label class="meal-option">
@@ -383,9 +379,10 @@
               </button>
             </div>
 
+            <!-- Step 6: Generate Meal-Plan -->
             <div class="step hidden" id="step6">
               <h4 class="text-md italic font-semibold mb-4 w-full">
-                Step 5: Generate Meal-Plan
+                Step 6: Generate Meal-Plan
               </h4>
               <button
                 id="generate-plan"
