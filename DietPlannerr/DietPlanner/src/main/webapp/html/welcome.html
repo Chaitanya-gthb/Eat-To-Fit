@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Eat2Fit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .bg-animated {
+            background: url('img1.jpg') no-repeat center center/cover;
+            animation: float 6s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen bg-animated">
+
+    <div class="relative text-center p-14 bg-white/30 border border-white/40 shadow-2xl backdrop-blur-lg rounded-3xl w-[650px]">
+
+        <!-- Welcome Text -->
+        <h1 class="relative text-6xl font-extrabold text-green-900 drop-shadow-md tracking-wide" id="welcomeText">
+            Welcome, User!
+        </h1>
+        <p class="relative text-2xl text-green-800 font-semibold mt-4">
+            Your journey to a healthier lifestyle starts now! 
+        </p>
+
+    
+        <button 
+            onclick="redirectToLanding()"
+            class="relative mt-10 bg-green-700 text-white px-12 py-5 rounded-full text-3xl font-extrabold shadow-lg tracking-wider
+            transition duration-300 transform hover:scale-110 hover:bg-orange-500 hover:shadow-orange-500/50">
+            Get Started →
+        </button>
+    </div>
+
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        let username = urlParams.get('name') || "User"; 
+
+       
+        document.getElementById('welcomeText').textContent = `Welcome, ${username}!`;
+
+
+        function redirectToLanding() {
+            window.location.href = "index.html"; 
+        }
+    </script>
+
+</body>
+</html>

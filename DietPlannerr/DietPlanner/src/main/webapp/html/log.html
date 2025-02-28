@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Glassmorphism Login Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-white text-black">
+      <nav
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-3xl font-bold"
+          >Eat<span class="text-5xl">2</span>Fit</a
+        >
+        <div>
+          <a
+            href="index.html"
+            class="mx-3 py-2 text-lime-600 hover:text-lime-200 text-lg"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="mx-3 py-2 text-lime-600 hover:text-lime-200 text-lg"
+            >About Us</a
+          >
+          <a
+            href="./mealPlanner.html"
+            class="mx-3 py-2 text-lime-600 hover:text-lime-200 text-lg"
+            >MealPlanner</a
+          >
+        </div>
+      </nav>
+    </header>
+    <div class="bg-[#080710] flex justify-center items-center h-screen">
+      <div class="relative w-[430px] h-[520px]">
+        <div
+          class="absolute w-[150px] h-[150px] bg-gradient-to-br from-lime-500 to-[#23a2f6] rounded-full left-44 -top-3"
+        ></div>
+        <div
+          class="absolute w-[150px] h-[150px] bg-gradient-to-r from-[#23a2f6] to-lime-500 rounded-full -right-72 -bottom-3"
+        ></div>
+      </div>
+      <form action="log.jsp"
+        class="relative -left-44 w-[400px] h-[400px] bg-white/10 border border-white/10 shadow-xl rounded-xl backdrop-blur-md p-8"
+      >
+        <h3 class="text-2xl font-semibold text-white text-center">
+          Sign-In Here
+        </h3>
+
+        <label for="email" class="block mt-4 text-white text-sm font-medium"
+          >Email</label
+        >
+        <input
+          type="email"
+          id="email"
+          placeholder="Email" name="log_email"
+          class="w-full h-12 bg-white/10 rounded-md px-3 mt-2 text-white text-sm focus:outline-none placeholder:text-gray-300"
+        required/>
+
+        <label for="password" class="block mt-4 text-white text-sm font-medium"
+          >Password</label
+        >
+        <input
+          type="password"
+          id="password"
+          placeholder="Password" name="log_password"
+          class="w-full h-12 bg-white/10 rounded-md px-3 mt-2 text-white text-sm focus:outline-none placeholder:text-gray-300"
+        required/>
+
+        <button
+          class="w-full mt-8 bg-white text-[#080710] py-3 rounded-md text-lg font-semibold cursor-pointer"
+        >
+          Log In
+        </button>
+        <p class="text-white mt-4 text-center">Don't have an account?<a href="../html/reg.html" class="ml-1 underline text-blue-300">Sign-Up</a></p>
+      </form>
+    </div>
+  </body>
+</html>

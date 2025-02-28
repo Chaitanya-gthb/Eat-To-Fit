@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - Eat2Fit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white font-sans">
+    <header class="bg-white text-black">
+      <nav
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-3xl font-bold">Eat2Fit</a>
+        <div>
+          <a
+            href="index.html"
+            class="mx-3 py-2 text-lime-600 hover:text-green-200"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="mx-3 py-2 text-lime-600 hover:text-green-200"
+            >About Us</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="services-hero bg-green-500 text-white py-20 text-center bg-contain bg-center h-[600px] w-full"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1535914254981-b5012eebbd15?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        "
+      >
+        <div class="mt-96">
+          <h1 class="text-5xl font-bold mb-4">Our Services</h1>
+          <p class="text-xl mb-8">
+            Discover how Eat2Fit can help you achieve your health and fitness
+            goals
+          </p>
+        </div>
+      </section>
+
+      <div class="pt-24 pb-20">
+        <h3 class="text-3xl font-bold text-center mb-4">
+          Create your personalized meal-plan
+        </h3>
+        <p class="px-20 text-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+          quasi, nobis eveniet nostrum eos tenetur quibusdam odit totam
+          repellendus, dolores temporibus ut, quis assumenda.
+        </p>
+        <section
+          class="bg-transparent p-8 rounded-lg shadow-xl border max-w-2xl mx-auto mt-10 mb-10"
+        >
+          <form id="meal-plan-form">
+            <!-- Step 1: Calorie Calculator -->
+            <div
+              class="step max-w-lg mx-auto mt-4 bg-white rounded-lg"
+              id="step1"
+            >
+              <h4 class="text-md italic font-semibold mb-4">
+                Step 1: Calorie Calculator
+              </h4>
+
+              <!-- <label class="block italic mb-2">Age:</label> -->
+              <input
+                type="number"
+                id="age"
+                class="bg-gray-50 w-full p-2 border rounded mb-4"
+                placeholder="Enter your age"
+              />
+
+              <!-- <label class="block italic mb-2">Gender:</label> -->
+              <select
+                id="gender"
+                class="bg-gray-50 w-full p-2 border rounded mb-4"
+              >
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+
+              <!-- <label class="block italic mb-2">Height:</label> -->
+              <div class="flex gap-2 mb-4">
+                <input
+                  type="number"
+                  id="height-cm"
+                  class="bg-gray-50 w-1/2 p-2 border rounded"
+                  placeholder="height (cm)"
+                  oninput="convertHeight('cm')"
+                />
+                <input
+                  type="number"
+                  id="height-ft"
+                  class="bg-gray-50 w-1/4 p-2 border rounded"
+                  placeholder="(ft)"
+                  oninput="convertHeight('ft')"
+                />
+                <input
+                  type="number"
+                  id="height-in"
+                  class="bg-gray-50 w-1/4 p-2 border rounded"
+                  placeholder="(in)"
+                  oninput="convertHeight('in')"
+                />
+              </div>
+
+              <!-- <label class="block italic mb-2">Weight:</label> -->
+              <div class="flex gap-2 mb-4">
+                <input
+                  type="number"
+                  id="weight-kg"
+                  class="bg-gray-50 w-1/2 p-2 border rounded"
+                  placeholder="Weight (kg)"
+                  oninput="convertWeight('kg')"
+                />
+                <input
+                  type="number"
+                  id="weight-lbs"
+                  class="bg-gray-50 w-1/2 p-2 border rounded"
+                  placeholder="(lbs)"
+                  oninput="convertWeight('lbs')"
+                />
+              </div>
+
+              <!-- <label class="block italic mb-2">Activity Level:</label> -->
+              <select
+                id="activity"
+                class="bg-gray-50 w-full p-2 border rounded mb-4"
+              >
+                <option value="1.2">Sedentary</option>
+                <option value="1.375">Light Exercise</option>
+                <option value="1.55">Moderate Exercise</option>
+                <option value="1.725">Heavy Exercise</option>
+                <option value="1.9">Athlete</option>
+              </select>
+
+              <button
+                onclick="calculateCalories()"
+                class="tracking-widest text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm w-full p-2"
+              >
+                Calculate Calories
+              </button>
+
+              <h3 class="text-md italic font-semibold mt-4">
+                Daily Calorie Needs:
+              </h3>
+              <p id="result" class="mt-2 text-lg font-bold"></p>
+            </div>
+
+            <!-- Step 2: Personal Details -->
+            <div class="step hidden" id="step2">
+              <h4 class="text-md italic font-semibold mb-4">
+                Step 2: Personal Details
+              </h4>
+              <input
+                type="text"
+                placeholder="Full Name"
+                class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4"
+                required
+              />
+              <input
+                type="number"
+                placeholder="Mobile-Number"
+                class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4"
+                required
+              />
+              <input
+                type="date"
+                class="bg-gray-50 w-full px-3 py-2 border rounded-md mb-4"
+                required
+              />
+              <button
+                type="button"
+                class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm px-12 py-2.5 text-center me-2 mb-2"
+                onclick="nextStep(2)"
+              >
+                N e X t
+              </button>
+            </div>
+
+            <!-- Step 3: Goal Selection -->
+            <div class="step hidden" id="step3">
+              <h4 class="text-md italic font-semibold mb-4">
+                Step 3: Your Goal
+              </h4>
+              <div class="flex flex-col gap-3">
+                <label class="goal-option">
+                  <input
+                    type="radio"
+                    name="goal"
+                    id="goal"
+                    value="weight_loss"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="bg-gray-50 goal-box flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1604480132715-bd70038b74df?q=80&w=2118&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Weight Loss"
+                      class="w-32 h-24 rounded-xl mr-3 object-cover text-center"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Weight Loss</span
+                    >
+                  </div>
+                </label>
+                <label class="goal-option">
+                  <input
+                    type="radio"
+                    name="goal"
+                    id="goal"
+                    value="weight_gain"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="bg-gray-50 goal-box flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Weight Gain"
+                      class="w-32 h-24 rounded-xl mr-3 object-cover text-center"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Weight Gain</span
+                    >
+                  </div>
+                </label>
+                <label class="goal-option">
+                  <input
+                    type="radio"
+                    name="goal"
+                    id="goal"
+                    value="weight_maintain"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="bg-gray-50 goal-box flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Weight Maintain"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Weight Maintain</span
+                    >
+                  </div>
+                </label>
+              </div>
+              <button
+                type="button"
+                class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm px-6 py-2.5 text-center mt-2 mb-2"
+                onclick="nextStep(3)"
+              >
+                Next
+              </button>
+            </div>
+
+            <!-- Step 4: Allergies -->
+            <div class="step hidden" id="step4">
+              <h4 class="text-md italic font-semibold mb-4">
+                Step 4: Any Allergies
+              </h4>
+              <div class="flex flex-col gap-3">
+                <label class="allergy-option">
+                  <input
+                    type="checkbox"
+                    name="allergy"
+                    value="dairy"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="allergy-box bg-gray-50 flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Dairy"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Dairy</span
+                    >
+                  </div>
+                </label>
+                <label class="allergy-option">
+                  <input
+                    type="checkbox"
+                    name="allergy"
+                    value="nuts"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="allergy-box bg-gray-50 flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Nuts"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Nuts</span
+                    >
+                  </div>
+                </label>
+              </div>
+              <button
+                type="button"
+                class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm px-6 py-2.5 text-center mt-2 mb-2"
+                onclick="nextStep(4)"
+              >
+                Next
+              </button>
+            </div>
+
+            <!-- Step 5: Diet Plan -->
+            <div class="step hidden" id="step5">
+              <h4 class="text-md italic font-semibold mb-4">
+                Step 5: Choose Your Diet Plan
+              </h4>
+              <div class="flex flex-col gap-3">
+                <label class="meal-option">
+                  <input
+                    type="radio"
+                    name="meal-plan"
+                    value="keto"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="meal-box flex items-center p-4 border-2 bg-gray-50 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Keto Diet"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Keto Diet</span
+                    >
+                  </div>
+                </label>
+                <label class="meal-option">
+                  <input
+                    type="radio"
+                    name="meal-plan"
+                    value="vegan"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="meal-box flex items-center p-4 border-2 bg-gray-50 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Vegan Diet"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Vegan Diet</span
+                    >
+                  </div>
+                </label>
+              </div>
+              <button
+                type="button"
+                class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm px-6 py-2.5 text-center mt-2 mb-2"
+                onclick="nextStep(5)"
+              >
+                Submit
+              </button>
+            </div>
+
+            <!-- Step 6: Generate Meal-Plan -->
+            <div class="step hidden" id="step6">
+              <h4 class="text-md italic font-semibold mb-4 w-full">
+                Step 6: Generate Meal-Plan
+              </h4>
+              <button
+                id="generate-plan"
+                type="button"
+                class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm px-6 py-2.5 text-center me-2 mb-2"
+                onclick="generateMealPlan()"
+              >
+                Generate Meal-Plan
+              </button>
+              <div id="meal-plan-result" class="mt-6"></div>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <section class="services-list py-20 px-6 bg-lime-200 w-full h-full">
+        <h2 class="text-4xl font-bold text-center mb-20 mt-2">Our Services</h2>
+        <div class="flex flex-row justify-evenly items-center gap-12">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md w-[420px] h-[420px] mb-10"
+          >
+            <h3 class="text-2xl font-bold mb-4">Personalized Meal Plans</h3>
+            <p class="mb-4">
+              Get custom meal plans tailored to your unique nutritional needs,
+              preferences, and fitness goals.
+            </p>
+            <img
+              class="w-full h-56 mt-10 object-cover"
+              src="https://images.unsplash.com/photo-1552255349-450c59a5ec8e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md w-[420px] h-[420px] mb-10"
+          >
+            <h3 class="text-2xl font-bold mb-4">
+              One-on-One Nutrition Coaching
+            </h3>
+            <p class="mb-4">
+              Work directly with our expert nutritionists to develop a
+              comprehensive nutrition strategy.
+            </p>
+            <img
+              class="w-full h-56 mt-10 object-cover"
+              src="https://images.unsplash.com/photo-1552255349-450c59a5ec8e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white text-black py-6">
+      <div class="container mx-auto px-6 text-center">
+        <p class="flex flex-row justify-between">
+          <span> &copy; 2025 Eat2Fit.</span><span> All rights reserved.</span>
+          <a href="./feedback.html" class="text-lime-600">Do Feedback</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/scriptt.js"></script>
+  </body>
+</html>
