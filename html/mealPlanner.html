@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="../css/styles.css" rel="stylesheet" />
   </head>
-  <body class="bg-white font-sans">
+  <body class="bg-white">
     <header class="bg-white text-black">
       <nav
         class="container mx-auto px-6 py-3 flex justify-between items-center"
@@ -30,12 +30,12 @@
 
     <main>
       <section
-        class="services-hero bg-green-500 text-white py-20 text-center bg-contain bg-center h-[600px] w-full"
+        class="services-hero bg-green-500 text-white py-20 text-center bg-contain bg-center h-[700px] w-full"
         style="
-          background-image: url('https://images.unsplash.com/photo-1535914254981-b5012eebbd15?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+          background-image: url('https://images.unsplash.com/photo-1576866209830-589e1bfbaa4d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         "
       >
-        <div class="mt-96">
+        <div class="mt-[500px] bg-transparent text-gray-800">
           <h1 class="text-5xl font-bold mb-4">Our Services</h1>
           <p class="text-xl mb-8">
             Discover how Eat2Fit can help you achieve your health and fitness
@@ -49,9 +49,8 @@
           Create your personalized meal-plan
         </h3>
         <p class="px-20 text-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
-          quasi, nobis eveniet nostrum eos tenetur quibusdam odit totam
-          repellendus, dolores temporibus ut, quis assumenda.
+          Achieve your health goals with our personalized meal plans, tailored
+          to your lifestyle, preferences, and nutritional needs.
         </p>
         <section
           class="bg-transparent p-8 rounded-lg shadow-xl border max-w-2xl mx-auto mt-10 mb-10"
@@ -313,6 +312,86 @@
                     >
                   </div>
                 </label>
+                <label class="allergy-option">
+                  <input
+                    type="checkbox"
+                    name="allergy"
+                    value="gluten"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="allergy-box bg-gray-50 flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Nuts"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >GLuten</span
+                    >
+                  </div>
+                </label>
+                <label class="allergy-option">
+                  <input
+                    type="checkbox"
+                    name="allergy"
+                    value="eggs"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="allergy-box bg-gray-50 flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Nuts"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Eggs</span
+                    >
+                  </div>
+                </label>
+                <label class="allergy-option">
+                  <input
+                    type="checkbox"
+                    name="allergy"
+                    value="soy"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="allergy-box bg-gray-50 flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Nuts"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Soy</span
+                    >
+                  </div>
+                </label>
+                <label class="allergy-option">
+                  <input
+                    type="checkbox"
+                    name="allergy"
+                    value="fish"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="allergy-box bg-gray-50 flex items-center p-4 border-2 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Nuts"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Fish</span
+                    >
+                  </div>
+                </label>
               </div>
               <button
                 type="button"
@@ -329,6 +408,46 @@
                 Step 5: Choose Your Diet Plan
               </h4>
               <div class="flex flex-col gap-3">
+                <label class="meal-option">
+                  <input
+                    type="radio"
+                    name="meal-plan"
+                    value="keto"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="meal-box flex items-center p-4 border-2 bg-gray-50 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Keto Diet"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Vegetarian Diet</span
+                    >
+                  </div>
+                </label>
+                <label class="meal-option">
+                  <input
+                    type="radio"
+                    name="meal-plan"
+                    value="keto"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="meal-box flex items-center p-4 border-2 bg-gray-50 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Keto Diet"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >high-protein Diet</span
+                    >
+                  </div>
+                </label>
                 <label class="meal-option">
                   <input
                     type="radio"
@@ -398,38 +517,84 @@
         </section>
       </div>
 
-      <section class="services-list py-20 px-6 bg-lime-200 w-full h-full">
-        <h2 class="text-4xl font-bold text-center mb-20 mt-2">Our Services</h2>
-        <div class="flex flex-row justify-evenly items-center gap-12">
-          <div
-            class="bg-white p-6 rounded-lg shadow-md w-[420px] h-[420px] mb-10"
-          >
-            <h3 class="text-2xl font-bold mb-4">Personalized Meal Plans</h3>
-            <p class="mb-4">
-              Get custom meal plans tailored to your unique nutritional needs,
-              preferences, and fitness goals.
-            </p>
+      <section class="services-list py-10 px-6  w-full h-full bg-gray-200">
+        <h2 class="text-4xl font-bold text-center mb-2 mt-2">Our Services</h2>
+        <p class="px-20 mb-10 text-center">
+          We offer smart, personalized solutions to help you achieve your health
+          and fitness goals effortlessly. From calculating your ideal daily
+          calorie intake to generating customized meal plans, our tools make
+          healthy eating simple and effective. Whether you’re looking to lose
+          weight, build muscle, or maintain a balanced diet, our services are
+          designed to fit your lifestyle. Start your journey towards better
+          health today!
+        </p>
+        <div class="flex flex-row justify-center items-center gap-10 ">
+          <div class="card shadow-xl">
             <img
-              class="w-full h-56 mt-10 object-cover"
-              src="https://images.unsplash.com/photo-1552255349-450c59a5ec8e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
+              class="svg"
+              src="https://plus.unsplash.com/premium_photo-1664391676405-431ae5ff7c0b?q=80&w=2013&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
+            <h1 class="bg-[#f2f2f2] text-center rounded-lg px-4">
+              Calorie Calculator
+            </h1>
+            <div class="card__content">
+              <p class="card__title">Calorie Calculator</p>
+              <p class="card__description">
+                Take control of your nutrition with our easy-to-use calorie
+                calculator! Whether you're looking to lose weight, gain muscle,
+                or maintain a balanced diet, our tool helps you determine the
+                perfect daily calorie intake based on your goals, activity
+                level, and body type. Stay on track, make informed food choices,
+                and achieve your fitness targets effortlessly. Start calculating
+                now and fuel your body the right way!
+              </p>
+            </div>
           </div>
-          <div
-            class="bg-white p-6 rounded-lg shadow-md w-[420px] h-[420px] mb-10"
-          >
-            <h3 class="text-2xl font-bold mb-4">
-              One-on-One Nutrition Coaching
-            </h3>
-            <p class="mb-4">
-              Work directly with our expert nutritionists to develop a
-              comprehensive nutrition strategy.
-            </p>
+
+          <div class="card shadow-xl">
             <img
-              class="w-full h-56 mt-10 object-cover"
-              src="https://images.unsplash.com/photo-1552255349-450c59a5ec8e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
+              class="svg"
+              src="https://images.unsplash.com/photo-1581347860118-588a42326161?q=80&w=1911&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
+            <h1 class="bg-[#f2f2f2] text-center rounded-lg px-4">
+              Meal-Plan Generator
+            </h1>
+            <div class="card__content">
+              <p class="card__title">Meal-Plan Generator</p>
+              <p class="card__description">
+                Create your perfect meal plan in seconds with our Meal Plan
+                Generator! Whether your goal is weight loss, muscle gain, or
+                balanced nutrition, our smart tool designs a customized meal
+                plan based on your preferences, dietary needs, and daily calorie
+                intake. Enjoy delicious, healthy, and easy-to-follow meals that
+                fit your lifestyle effortlessly. Start generating your
+                personalized meal plan today and take the first step toward a
+                healthier you!
+              </p>
+            </div>
+          </div>
+
+          <div class="card shadow-md">
+            <img
+              class="svg"
+              src="https://images.unsplash.com/photo-1611599537845-1c7aca0091c0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+            <h1 class="bg-[#f2f2f2] text-center rounded-lg px-4">
+              Nutritious Meals
+            </h1>
+            <div class="card__content">
+              <p class="card__title">Nutritious Meals for Every Lifestyle</p>
+              <p class="card__description">
+                Enjoy a variety of wholesome meals tailored to your taste and
+                health goals. From energizing breakfasts to keep you fueled
+                throughout the day, balanced lunches for sustained energy, and
+                satisfying dinners to end your day on a healthy note, we’ve got
+                you covered. Whether you prefer vegetarian, vegan, keto,
+                high-protein, or gluten-free options, our meal plans ensure you
+                get the perfect balance of taste and nutrition in every bite.
+                Eat smart, stay fit, and enjoy every meal!
+              </p>
+            </div>
           </div>
         </div>
       </section>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Meal Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-lime-50">
+    <header class="bg-white text-black">
+      <nav
+        class="container mx-auto py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-3xl font-bold relative right-10"
+          >Eat<span class="text-5xl">2</span>Fit</a
+        >
+        <div class="relative left-20">
+          <a
+            href="index.html"
+            class="mx-3 py-2 text-lime-600 hover:text-lime-200 text-lg"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="mx-3 py-2 text-lime-600 hover:text-lime-200 text-lg"
+            >About Us</a
+          >
+          <a
+            href="./mealPlanner.html"
+            class="mx-3 py-2 text-lime-600 hover:text-lime-200 text-lg"
+            >MealPlanner</a
+          >
+          <a
+            href="./reg.html"
+            class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm px-6 py-2.5 text-center me-2 mb-2"
+            >Sign-Up</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-lime-600 text-white p-5">
+          <h1 class="text-2xl font-bold ml-1">Admin Panel</h1>
+        <nav class="mt-5">
+          <ul>
+            <li
+              class="py-2 px-4 bg-lime-600 rounded-md cursor-pointer"
+              onclick="showSection('dashboard')"
+            >
+              Dashboard
+            </li>
+            <li
+              class="py-2 px-4 mt-2 hover:bg-lime-600 rounded-md cursor-pointer"
+              onclick="showSection('meals')"
+            >
+              Manage Meals
+            </li>
+            <li
+              class="py-2 px-4 mt-2 hover:bg-lime-600 rounded-md cursor-pointer"
+              onclick="showSection('users')"
+            >
+              Users
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-6 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1493770348161-369560ae357d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <!-- Dashboard -->
+        <section id="dashboard">
+          <h2 class="text-3xl font-semibold text-lime-600">Dashboard</h2>
+          <div class="grid grid-cols-3 gap-6 mt-6">
+            <div class="bg-white border border-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-semibold text-lime-600">Total Meals</h3>
+              <p class="text-2xl font-bold mt-2">120</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-semibold text-lime-600">Total Users</h3>
+              <p class="text-2xl font-bold mt-2">45</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Manage Meals -->
+        <section id="meals" class="hidden">
+          <h2 class="text-3xl font-semibold text-lime-600">Manage Meals</h2>
+          <button
+            class="mt-4 bg-lime-500 text-white px-4 py-2 rounded-md"
+            onclick="addMeal()"
+          >
+            Add Meal
+          </button>
+          <ul id="meal-list" class="mt-4"></ul>
+        </section>
+
+        <!-- Users -->
+        <section id="users" class="hidden">
+          <h2 class="text-3xl font-semibold text-lime-600">Users</h2>
+          <ul id="user-list" class="mt-4"></ul>
+        </section>
+
+        <!-- Settings -->
+        <section id="settings" class="hidden">
+          <h2 class="text-3xl font-semibold text-lime-600">Settings</h2>
+          <p class="mt-4">Settings section under development.</p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="bg-white text-black py-4">
+      <div class="container mx-auto px-6 text-center">
+        <p class="flex flex-row justify-between">
+          <span> &copy; 2025 Eat2Fit.</span><span> All rights reserved.</span>
+          <a href="../html/feedback.html" class="text-lime-600">Do Feedback</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      function showSection(sectionId) {
+        document.querySelectorAll("main section").forEach((section) => {
+          section.classList.add("hidden");
+        });
+        document.getElementById(sectionId).classList.remove("hidden");
+      }
+
+      function addMeal() {
+        let mealName = prompt("Enter meal name:");
+        if (mealName) {
+          let li = document.createElement("li");
+          li.textContent = mealName;
+          li.classList.add(
+            "mt-2",
+            "bg-white",
+            "p-2",
+            "rounded-md",
+            "shadow-md"
+          );
+          document.getElementById("meal-list").appendChild(li);
+        }
+      }
+    </script>
+  </body>
+</html>

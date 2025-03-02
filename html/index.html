@@ -7,16 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="../css/styles.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-100 font-sans overflow-x-hidden">
     <header class="bg-white text-black">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="text-3xl font-bold">Eat<span class="text-5xl">2</span>Fit</a>
-            <div>
+            <a href="index.html" class="text-3xl font-bold relative right-10">Eat<span class="text-5xl">2</span>Fit</a>
+            <div class="relative left-20">
                 <a href="index.html" class="mx-3 py-2 text-lime-600 hover:text-lime-200 text-lg">Home</a>
                 <a href="about.html" class="mx-3 py-2 text-lime-600 hover:text-lime-200 text-lg">About Us</a>
                 <a href="./mealPlanner.html" class="mx-3 py-2 text-lime-600 hover:text-lime-200 text-lg">MealPlanner</a>
                 <a href="./reg.html" class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm px-6 py-2.5 text-center me-2 mb-2">Sign-Up</a>
-                
+                <a href="./admin.html" class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-md text-sm px-6 py-2.5 text-center me-2 mb-2">Admin</a>
             </div>
         </nav>
     </header>
@@ -31,24 +31,33 @@
             </div>
         </section>
 
-        <section class="features py-20">
+        <section class="features py-20 bg-gray-200">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-8">Why Choose Eat2Fit?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="feature-card bg-white p-6 rounded-lg shadow-md h-[500px]">
-                        <h3 class="text-xl font-semibold mb-4">Personalized Plans</h3>
-                        <p>Tailored meal plans based on your unique nutritional needs and fitness goals.</p>
-                        <img class="w-full h-80 mt-10 object-cover " src="https://images.unsplash.com/photo-1552255349-450c59a5ec8e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                    <div class="card">
+                        <img class="svg" src="https://images.unsplash.com/photo-1467453678174-768ec283a940?q=80&w=2044&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                        <h1 class="bg-[#f2f2f2] text-center rounded-lg px-4">Personalized Meal-Plans</h1>
+                        <div class="card__content">
+                          <p class="card__title">Personalized Plans</p>
+                          <p class="card__description">Achieve your health goals with our personalized meal plans, tailored to your lifestyle, preferences, and nutritional needs. Whether you want to lose weight, build muscle, or maintain a balanced diet, our expert-designed plans ensure you get the right nutrients without compromising on taste. With options for vegetarian, vegan, keto, and gluten-free diets, plus easy-to-follow, delicious recipes, we make healthy eating simple and enjoyable. Get a meal plan that adapts to your schedule and supports your journey to better health—start today!</p>
+                        </div>
                     </div>
-                    <div class="feature-card bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4">Expert Guidance</h3>
-                        <p>Our team of nutritionists and fitness experts are here to support you every step of the way.</p>
-                        <img class="w-full h-80 mt-10 object-cover " src="https://images.unsplash.com/photo-1490885578174-acda8905c2c6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                    <div class="card">
+                        <img class="svg" src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                        <h1 class="bg-[#f2f2f2] text-center rounded-lg px-4">Get your desired shape</h1>
+                        <div class="card__content">
+                          <p class="card__title">Get your desired shape</p>
+                          <p class="card__description">Get your desired shape with our customized meal plans, designed to match your fitness goals and lifestyle. Whether you’re aiming for weight loss, muscle gain, or overall wellness, our expert-crafted plans provide the perfect balance of nutrition without compromising on taste. With personalized diet options, easy-to-follow recipes, and a flexible approach, we make achieving your dream physique simple and sustainable. Start your transformation today!</p>
+                        </div>
                     </div>
-                    <div class="feature-card bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4">Delicious Recipes</h3>
-                        <p>Enjoy a variety of tasty, healthy recipes that make eating well a pleasure.</p>
-                        <img class="w-full h-80 mt-10 object-cover "  src="https://images.unsplash.com/photo-1490885578174-acda8905c2c6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                    <div class="card">
+                        <img class="svg" src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?q=80&w=2016&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                        <h1 class="bg-[#f2f2f2] text-center rounded-lg px-4">Delicious Recipes</h1>
+                        <div class="card__content">
+                          <p class="card__title">Delicious Recipes</p>
+                          <p class="card__description">Enjoy delicious recipes that are not only tasty but also packed with the right nutrients to fuel your body. Whether you crave wholesome breakfasts, hearty lunches, or satisfying dinners, our expertly crafted recipes cater to all tastes and dietary needs. With easy-to-follow steps and fresh ingredients, cooking healthy meals has never been more enjoyable. Try our recipes today and make every meal a delightful experience!</p>
+                        </div>
                     </div>
                 </div>
             </div>
