@@ -44,7 +44,7 @@
         </div>
       </section>
 
-      <div class="pt-24 pb-20">
+      <div class="pt-24 pb-20 bg-gray-100">
         <h3 class="text-3xl font-bold text-center mb-4">
           Create your personalized meal-plan
         </h3>
@@ -53,12 +53,11 @@
           to your lifestyle, preferences, and nutritional needs.
         </p>
         <section
-          class="bg-transparent p-8 rounded-lg shadow-xl border max-w-2xl mx-auto mt-10 mb-10"
-        >
+          class="bg-white p-8 rounded-lg shadow-xl border mx-auto mt-10 mb-10 w-[1000px] h-[500px] overflow-y-scroll">
           <form id="meal-plan-form">
             <!-- Step 1: Calorie Calculator -->
             <div
-              class="step max-w-lg mx-auto mt-4 bg-white rounded-lg"
+              class="step max-w-4xl mx-auto mt-4  bg-transparent rounded-lg"
               id="step1"
             >
               <h4 class="text-md italic font-semibold mb-4">
@@ -69,14 +68,14 @@
               <input
                 type="number"
                 id="age"
-                class="bg-gray-50 w-full p-2 border rounded mb-4"
+                class="bg-white w-full p-2 border rounded mb-4"
                 placeholder="Enter your age"
               />
 
               <!-- <label class="block italic mb-2">Gender:</label> -->
               <select
                 id="gender"
-                class="bg-gray-50 w-full p-2 border rounded mb-4"
+                class="bg-white w-full p-2 border rounded mb-4"
               >
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -87,21 +86,21 @@
                 <input
                   type="number"
                   id="height-cm"
-                  class="bg-gray-50 w-1/2 p-2 border rounded"
+                  class="bg-white w-1/2 p-2 border rounded"
                   placeholder="height (cm)"
                   oninput="convertHeight('cm')"
                 />
                 <input
                   type="number"
                   id="height-ft"
-                  class="bg-gray-50 w-1/4 p-2 border rounded"
+                  class="bg-white w-1/4 p-2 border rounded"
                   placeholder="(ft)"
                   oninput="convertHeight('ft')"
                 />
                 <input
                   type="number"
                   id="height-in"
-                  class="bg-gray-50 w-1/4 p-2 border rounded"
+                  class="bg-white w-1/4 p-2 border rounded"
                   placeholder="(in)"
                   oninput="convertHeight('in')"
                 />
@@ -112,14 +111,14 @@
                 <input
                   type="number"
                   id="weight-kg"
-                  class="bg-gray-50 w-1/2 p-2 border rounded"
+                  class="bg-white w-1/2 p-2 border rounded"
                   placeholder="Weight (kg)"
                   oninput="convertWeight('kg')"
                 />
                 <input
                   type="number"
                   id="weight-lbs"
-                  class="bg-gray-50 w-1/2 p-2 border rounded"
+                  class="bg-white w-1/2 p-2 border rounded"
                   placeholder="(lbs)"
                   oninput="convertWeight('lbs')"
                 />
@@ -128,7 +127,7 @@
               <!-- <label class="block italic mb-2">Activity Level:</label> -->
               <select
                 id="activity"
-                class="bg-gray-50 w-full p-2 border rounded mb-4"
+                class="bg-white w-full p-2 border rounded mb-4"
               >
                 <option value="1.2">Sedentary</option>
                 <option value="1.375">Light Exercise</option>
@@ -412,7 +411,7 @@
                   <input
                     type="radio"
                     name="meal-plan"
-                    value="keto"
+                    value="vegetarian"
                     class="hidden peer"
                   />
                   <div
@@ -432,7 +431,7 @@
                   <input
                     type="radio"
                     name="meal-plan"
-                    value="keto"
+                    value="high_protein"
                     class="hidden peer"
                   />
                   <div
@@ -485,6 +484,26 @@
                     />
                     <span class="text-lg font-medium peer-checked:text-teal-600"
                       >Vegan Diet</span
+                    >
+                  </div>
+                </label>
+                <label class="meal-option">
+                  <input
+                    type="radio"
+                    name="meal-plan"
+                    value="Non_Vegetarian"
+                    class="hidden peer"
+                  />
+                  <div
+                    class="meal-box flex items-center p-4 border-2 bg-gray-50 border rounded-lg cursor-pointer transition-all duration-300 peer-checked:border-teal-500 peer-checked:bg-teal-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1632836873327-d14f3ac7c19a?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Non-Veg Diet"
+                      class="w-32 h-24 rounded-xl mr-3"
+                    />
+                    <span class="text-lg font-medium peer-checked:text-teal-600"
+                      >Non-Vegetarian Diet</span
                     >
                   </div>
                 </label>
